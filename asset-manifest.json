@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/lobinhodev/App-react-firstpage/static/css/main.d01ed32a.css",
+    "main.js": "/lobinhodev/App-react-firstpage/static/js/main.736515fb.js",
+    "static/js/787.28cb0dcd.chunk.js": "/lobinhodev/App-react-firstpage/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "/lobinhodev/App-react-firstpage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/icomoon.svg?z9qsnb": "/lobinhodev/App-react-firstpage/static/media/icomoon.62034278859f2f6c4351.svg",
+    "static/media/icomoon.eot?z9qsnb": "/lobinhodev/App-react-firstpage/static/media/icomoon.10df948d692a5d273d90.eot",
+    "static/media/icomoon.woff?z9qsnb": "/lobinhodev/App-react-firstpage/static/media/icomoon.3006bf64eaceee44d2e1.woff",
+    "static/media/icomoon.ttf?z9qsnb": "/lobinhodev/App-react-firstpage/static/media/icomoon.e72044681f5daf110589.ttf",
+    "index.html": "/lobinhodev/App-react-firstpage/index.html",
+    "main.d01ed32a.css.map": "/lobinhodev/App-react-firstpage/static/css/main.d01ed32a.css.map",
+    "main.736515fb.js.map": "/lobinhodev/App-react-firstpage/static/js/main.736515fb.js.map",
+    "787.28cb0dcd.chunk.js.map": "/lobinhodev/App-react-firstpage/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d01ed32a.css",
+    "static/js/main.736515fb.js"
+  ]
+}
