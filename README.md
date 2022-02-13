@@ -206,3 +206,5 @@ Ou
 
 -   npm install --save-dev gh-pages
 -   npm run publicar
+
+[Deploy](https://create-react-app.dev/docs/deployment/)
