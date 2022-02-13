@@ -195,3 +195,14 @@ Ou
 -   Identifique a representação mínima (mas completa) do State da UI
 -   Identifique onde o State deve ficar
 -   Adicione o fluxo de dados inverso
+
+### Comandos
+
+-   npm run build
+-   no json
+    "homepage": "https://SeuGitHub.github.io/NomeDoPro...",
+    script:
+    "publicar": "npm run build && ./node_modules/.bin/gh-pages -d build"
+
+-   npm install --save-dev gh-pages
+-   npm run publicar
