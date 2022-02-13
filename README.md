@@ -1,70 +1,197 @@
-# Getting Started with Create React App
+# Introdução ao ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Aula 1 - introdução
 
-## Available Scripts
+### Conhecendo a tecnologia ReactJS
 
-In the project directory, you can run:
+#### Requisitos básicos
 
-### `npm start`
+-   JavaScript
+-   CSS
+-   HTML
+-   Editor de texto
+-   NPM
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### História e conceitos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> "Uma biblioteca JavaScript para criar interfaces de usuários - ReactJS" **Versão atual 16.8.6**
 
-### `npm test`
+-   Criado em `2001` por `Jordan Walke` no Facebook, baseado em XHP, um framework para criação de HTML no PHP
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Surgiu no mural de notícias do Facebook, decidiram criar porque o feed estava crescendo e estavam com problemas de manutenção, escalabilidade, renderização**
 
-### `npm run build`
+-   `2012` utilizada no instagram
+-   `2013` anúncio para liberação OpenSource na JSConf US
+-   `2015` ReactNative - Mobile
+-   `2015` UWP (Universal Windows Platform) - Desktop
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   React é uma biblioteca e não um framework como o AngularJS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Biblioteca geralmente já possui funcionalidades já pré-definidas, não se pode sair muito, porque o ReactJS é JavaScript**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Framework é uma caixinha fechada de funcionalidades**
 
-### `npm run eject`
+-   A principal função é a criação de interface para o usuário
+-   Trabalhar com JavaScript de forma mais fácil
+-   O ecossistema é muito grande, pode ser considerado uma desvantagem, por isso devemos analisar quais ferramentas é viável em determinada aplicação
+-   ReactJs foca em ser modular, ou seja, podemos encaixar em qualquer projeto, mesmo que em aplicações com tecnologias antigas
+-   ReactJS é uma linguagem declarativa, ou seja, não está muito preocupada com os passos, mas sim na interface do usuário
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**ReactJS pode ser utilizado em qualquer lugar e é baseado em componentes - são pedacinhos**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   The New York Times, Netflix, Luizalabs, Instagram, Nubank
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Configuração
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   React Create App
+-   React Scripts
+-   Task Runners e Bundler Sizers
+-   Pode rodar com alguma CDN
 
-## Learn More
+### Criando projeto ReactJS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   npm init
+-   npm install --save react@17.0.2 react-dom@17.0.2 react-scripts@3.0.1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ou
 
-### Code Splitting
+-   npx create-react-app my-app
+-   cd my-app
+-   npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### JSX
 
-### Analyzing the Bundle Size
+-   const element = <h1>Hello World</h1>;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Nem HTML, nem String**
 
-### Making a Progressive Web App
+-   React não separa as tecnologias colocando marcação em arquivos separados, e sim separa conceitos e mantém o código pouco acoplado chamando-os de componentes
+-   Não é obrigatório utilizar o JSX
+-   Sintax Suggar para React.createElement
+-   O browser não interpreta o JSX, para isso é necessário um transpilador para que a aplicação posso entender o código, com por exemplo o BABEL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Renderização
 
-### Advanced Configuration
+-   Renderização de elementos
+-   React DOM = utiliza o virtual DOM
+-   Nós Raiz
+-   React pensa em como a interface deve estar a cada momento ao invés de altera-lá com o tempo, o que faz ter ganho de performance e evita uma série de erros
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Componentes e Props
 
-### Deployment
+-   Componentes são peças de lego analogamente
+-   Props são parâmetros
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    **Vamos ver Função e Classe; Props; Composição e Extração de Componentes**
 
-### `npm run build` fails to minify
+`No final das contas não existem Classes em JS, o que há realmente são protótipos`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Estado e ciclo de vida
+
+-   Inicialização
+-   Montagem
+-   Atualização
+-   Desmontagem
+
+-   `Inicialização` (props e estate)
+
+-   `Montagem` (componentWillMount) -> (render) -> (componentDidMount)
+
+-   `Atualização` (componentWillReceiveProps) -> (shouldComponentUpdate) -> (_SIM_) OU (_NÃO_) -> (componentWillUpdate) -> (render) -> (componentDidUpdate)
+
+(shouldComponentUpdate) -> (_SIM_) OU (_NÃO_) -> (componentWillUpdate) -> (render) -> (componentDidUpdate)
+
+-   `Desmontagem` (componentWillUnmount)
+
+**nenhum componente pai ou filho devem saber se outro componente possui estado ou não**
+
+**O estado é apenas local ao componente e caso seja necessário enviar algum atributo para outro então é feito via props**
+
+### Ecossistema
+
+-   React Router
+-   Redux
+-   Material UI
+-   Ant-Design
+-   Storybook
+-   Gatsby
+-   Jest
+-   React i18n Next
+
+## Aula 2 - Integrando o webpack ao ReactJS
+
+### Webpack
+
+-   É um module bundler (um empacotador de módulos para aplicações JS)
+-   Gerar bundler que será utilizado no HTML, em ES5
+-   [Webpack](https://webpack.js.org/)
+
+### Suporte do Webpack
+
+-   Fontes
+-   HTML
+-   CSS
+-   JavaScript
+-   Imagens
+-   Plugins
+
+### Configurando o Webpack
+
+**Principais conceitos**
+
+`Entry` - Utilizando grafo, o Webpack precisa de um ponto de entrada para buscar todos os módulos e dependências
+
+`Output` - É para determinar quais são os bundler que o Webpack irá emitir
+
+`Loaders` - É para permitir que o Webpack gerencie arquivos que não JavaScript
+
+`Plugins` - Plugins podem ser utilizados para otimização de pacotes, minificação, injeção de scripts e muito mais
+
+`Mode` - Utilizados para abordagem de configuração zero. É possível configurar módulos como **production**, **development** ou **none**
+
+### criação do arquivo Webpack
+
+-   npm i -D webpack webpack-cli
+-   "build": "webpack --mode production"
+-   npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+### EsLint
+
+-   npm install --save-dev eslint babel-eslint eslint-plugin-react eslint-watch
+
+## Aula 3 - Conceitos aplicados aos tipos de dados e condições da biblioteca
+
+> Em ReactJS, podemos criar componentes distintos que encapsulam o comportamento necessário, então podemos renderizar apenas alguns dos elementos dependendo do estado sda sua aplicação
+
+[ReactJS](https://pt-br.reactjs.org/docs/rendering-elements.html)
+
+### Renderização condicional
+
+-   Variável de Elementos
+-   If inline com Operador Lógico &&
+-   If-Else inline com Operador Condicional
+-   Evitando que um componente seja renderizado
+
+### Renderização condicional
+
+-   Renderizando múltiplos Componentes
+-   Componentes de lista básica
+-   Chaves
+-   Extraindo Componentes com Chaves
+-   Chaves devem ser únicas apenas entre elementos irmãos
+
+### Manipulando eventos
+
+-   Manipular eventos em elementos React é muito semelhante a manipular eventos em elementos DOM
+
+**Eventos em React são nomeados usando o CamelCase**
+**Com o JSX precisamos passar uma função como manipulador de eventos ao invés de um texto**
+
+### Pensando do jeito React
+
+-   Comece com um mock
+-   Separa a UI em hierarquia de componentes
+-   Crie uma versão estática em React
+-   Identifique a representação mínima (mas completa) do State da UI
+-   Identifique onde o State deve ficar
+-   Adicione o fluxo de dados inverso
